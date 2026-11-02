@@ -2,6 +2,9 @@ name: VPN Gate Node Check
 
 on:
   workflow_dispatch:
+  schedule:
+    # 每天 UTC 时间 00:00 运行一次（北京时间 早上 08:00）
+    - cron: '0 0 * * *'
 
 permissions:
   contents: read
