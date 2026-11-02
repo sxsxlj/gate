@@ -1,10 +1,7 @@
-```yaml
 name: VPN Gate Node Check
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
 
 permissions:
   contents: read
@@ -72,4 +69,3 @@ jobs:
 
       - name: Show site URL
         run: 'echo "site: https://仓库用户名.github.io/gate/ (deploy outcome: ${{ steps.deployment.outcome }})"'
-```
